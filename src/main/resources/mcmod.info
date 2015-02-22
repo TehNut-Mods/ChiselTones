@@ -1,0 +1,16 @@
+[
+{
+  "modid": "chiseltones",
+  "name": "Chisel Tones",
+  "description": "Chisel compatibility for Ztones",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://tehnut.info/",
+  "updateUrl": "http://tehnut.info/jenkins/",
+  "authorList": [ "TehNut" ],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
