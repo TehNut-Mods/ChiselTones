@@ -102,12 +102,26 @@ public class ChiselTones {
         }
     }
 
+    /**
+     *
+     * @param groupName - Name of Chisel group to add to
+     * @param block - Block to add
+     * @param maxMeta - Highest meta of the block
+     * @param config - Does the config allow
+     */
     private static void addVariationFast(String groupName, Block block, int maxMeta, boolean config) {
         if (config)
             for (int meta = 0; meta <= maxMeta; meta++)
                 Carving.chisel.addVariation(groupName, block, meta, meta);
     }
 
+    /**
+     *
+     * @param groupName - Name of Chisel group to add to
+     * @param block - Block to add
+     * @param order - What position to put the block at
+     * @param config - Does the config allow
+     */
     private static void addVariationWithoutMeta(String groupName, Block block, int order, boolean config) {
         if (config)
             Carving.chisel.addVariation(groupName, block, 0, order);
