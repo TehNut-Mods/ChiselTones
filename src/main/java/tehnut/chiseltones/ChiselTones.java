@@ -1,15 +1,14 @@
 package tehnut.chiseltones;
 
-import com.cricketcraft.chisel.carving.Carving;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraft.block.Block;
+import team.chisel.carving.Carving;
 
 import java.io.File;
 
 import static com.riciJak.Ztones.init.ModBlocks.*;
-import static com.riciJak.Ztones.init.ModBlocks.ztylBlock;
 
 @Mod(modid = ModInformation.ID, name = ModInformation.NAME, version = ModInformation.VERSION, dependencies = ModInformation.DEPEND)
 public class ChiselTones {
@@ -19,7 +18,7 @@ public class ChiselTones {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        ConfigHandler.init(new File(event.getModConfigurationDirectory() + "/ChiselTones.cfg"));
+        ConfigHandler.init(new File(event.getModConfigurationDirectory(), "ChiselTones.cfg"));
     }
 
     @Mod.EventHandler
