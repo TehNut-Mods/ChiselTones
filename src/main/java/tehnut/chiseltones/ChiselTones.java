@@ -1,10 +1,10 @@
 package tehnut.chiseltones;
 
+import com.cricketcraft.chisel.api.carving.CarvingUtils;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraft.block.Block;
-import team.chisel.carving.Carving;
 
 import java.io.File;
 
@@ -111,7 +111,7 @@ public class ChiselTones {
     private static void addVariationFast(String groupName, Block block, int maxMeta, boolean config) {
         if (config)
             for (int meta = 0; meta <= maxMeta; meta++)
-                Carving.chisel.addVariation(groupName, block, meta, meta);
+                CarvingUtils.chisel.addVariation(groupName, block, meta, meta);
     }
 
     /**
@@ -123,6 +123,6 @@ public class ChiselTones {
      */
     private static void addVariationWithoutMeta(String groupName, Block block, int order, boolean config) {
         if (config)
-            Carving.chisel.addVariation(groupName, block, 0, order);
+            CarvingUtils.chisel.addVariation(groupName, block, 0, order);
     }
 }
